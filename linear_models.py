@@ -127,7 +127,7 @@ class LogisticRegression:
             current_cost = self.compute_cost(X, y)
             cost_history.append(current_cost)
 
-            if abs(prev_cost - current_cost) < self.epsilon:
+            if abs(prev_cost - current_cost) <= self.epsilon:
                 print(f"Converged at iteration {i} with cost {current_cost}")
                 break
 
